@@ -2,9 +2,6 @@ import React from 'react'
 
 function Square ({item, index, tour, arrayRep}) {
 
-    console.log(index)
-
-
     if (index <= tour-1) {
 
         if (arrayRep[index] === 'oui'){

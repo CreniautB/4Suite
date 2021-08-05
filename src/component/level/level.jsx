@@ -18,9 +18,6 @@ function Level({level, chrono,  arrayRep, setArrayRep,}){
     function getAnswer(reponse, e) {
        
         let questionReponse = list[tour][2]
-
-        console.log(questionReponse===reponse)
-        console.log(note)
     
         if(questionReponse === reponse){
             setArrayRep( arrayRep => [...arrayRep,'oui'])
