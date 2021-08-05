@@ -3,16 +3,15 @@ import Timer from '../../../node_modules/react-compound-timer'
 import sendList from './list'
 import './level.css'
 import EndGame from '../endGame/endGame'
+import Square from '../square/square'
 
-function Level({level, chrono}){
+function Level({level, chrono,  arrayRep, setArrayRep,}){
 
     const [ endGame, setEndGame ] = useState(false)
 
     const [note, setNote] = useState(0)
-
     const [tour, setTour] = useState(0)
     const [suite, setSuite] = useState(0)
-
 
     const list = sendList(level)
 
@@ -20,8 +19,11 @@ function Level({level, chrono}){
        
         let questionReponse = list[tour][2]
 
+        console.log(questionReponse===reponse)
+        console.log(note)
     
         if(questionReponse === reponse){
+            setArrayRep( arrayRep => [...arrayRep,'oui'])
             if(suite === 3)
                 {
                     setNote(note +1 )
@@ -31,6 +33,7 @@ function Level({level, chrono}){
             {setSuite(suite + 1)}            
         }
         else {
+            setArrayRep( arrayRep => [...arrayRep,'non'])
             setSuite(0)
         }
 
@@ -75,6 +78,10 @@ function Level({level, chrono}){
         <div className="reponseContainer">
             <button className="button" onClick={() => getAnswer('OUI')} >Oui</button>
             <button className="button" onClick={() => getAnswer('')}>Non</button>
+        </div>
+
+        <div className="grilleReponse" >
+                {list.map((item, i) => { return <Square key={i} item={item} index={i} tour={tour} arrayRep={arrayRep} /> })}
         </div>
 
     </div>

@@ -6,6 +6,7 @@ function HomePage() {
 
     const [level, setLevel] = useState(false)
     const [chrono, setChrono] = useState(false)
+    const [arrayRep, setArrayRep] = useState([])
 
     function selectLevel(id) {
         setLevel(id)
@@ -13,7 +14,7 @@ function HomePage() {
 
     if(level && chrono) {
         return (
-            <Level  level={level} chrono={chrono} />
+            <Level level={level} chrono={chrono} arrayRep={arrayRep} setArrayRep={setArrayRep} />
         ) 
     }
 
@@ -23,9 +24,9 @@ function HomePage() {
                 <h1>
                     Choix du chrono
                 </h1>
-                <button className="button" onClick={() => setChrono(60000)} >1 minutes</button>
-                <button className="button" onClick={() => setChrono(120000)} >2 minutes</button>
-                <button className="button" onClick={() => setChrono(300000)} >5 minutes</button>
+                <button className="button" onClick={() => setChrono(600000)} >10 minutes</button>
+                <button className="button" onClick={() => setChrono(900000)} >15 minutes</button>
+                <button className="button" onClick={() => setChrono(1500000)} >25 minutes</button>
             </div>
         )
     }
@@ -39,7 +40,7 @@ function HomePage() {
 
            <h2 className="regle">
                 Répondre au question par oui ou non 
-                <br/> Vous devez répondre juste à 4 questions à la suite pour marqué 1 point.
+                <br/> Vous devez répondre juste à 4 questions à la suite pour marquer 1 point.
             </h2>
 
             <div className='levelChoice' >Choisir le niveau</div>
