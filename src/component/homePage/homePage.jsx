@@ -35,11 +35,11 @@ function HomePage() {
       <div className="homePage">
         
            <h1>
-               Jeux du 4 à la suite<br/>
+               Jeu du 4 à la suite<br/>
            </h1>
 
            <h2 className="regle">
-                Répondre au question par oui ou non 
+                Répondre aux questions par oui ou non 
                 <br/> Vous devez répondre juste à 4 questions à la suite pour marquer 1 point.
             </h2>
 

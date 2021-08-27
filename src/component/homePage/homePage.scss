@@ -31,6 +31,24 @@ body{
     font-size: 15px;
 }
 
+.buttonLink {
+    list-style: none;
+    background-color: $greenColor;
+    padding: 10px;
+    border-radius: 5px;
+    color: White;
+    margin: auto;
+    margin-bottom: 0.5em;
+    max-width: 150px;
+    box-shadow: 0px 0px 0.95px 0.95px $greenColor;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none;
+    letter-spacing: 0.80px;
+    display: block;
+}
+
 
 .regle {
     font-size: 18px;

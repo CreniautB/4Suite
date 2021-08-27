@@ -297,7 +297,7 @@ let list1 = [
     ["252/7=36 ?","36","OUI"],
     ["207/3=69 ?","69","OUI"],
     ["En anglais oublier se dit forgive ?","forgive",""],
-    ["le poule raille","raille",""],
+    ["la poule raille","raille",""],
     ["324/18=18 ?","18","OUI"],
     ["En anglais construire se build ?","build","OUI"],
     ["En anglais faire se dit do ?","do","OUI"],
